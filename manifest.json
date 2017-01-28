@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "kiwibank-sparkline",
+  "version": "1.0",
+  "description": "Add a sparkline to your accounts page",
+  "icons": {
+    "48": "icon48.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://www.ib.kiwibank.co.nz/accounts/view/*"],
+    "js": ["bundle.js"]
+  }]
+}
+

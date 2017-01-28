@@ -1,46 +1,19 @@
-var moment = require('moment')
+const scrapePage = require('./util/scrapePage')
+const transformData = require('./util/transformData')
+const graph = require('./util/graph')
 
-if (!isKiwibankAccountPage(location)) return 
+console.log('here')
 
-function isKiwibankAccountPage (loc) {
-  return /^https:\/\/www\.ib\.kiwibank\.co\.nz\/accounts\/view/.test(loc)
-}
+// document.addEventListener("DOMContentLoaded", () => {
+  console.log("starting kiwibank-sparkline")
 
-var table = document.querySelector('table#TransactionTable')
-var rows = table.querySelectorAll('tr.details')
+  const rawData = scrapePage()
+  const timeSeries = transformData(rawData)
 
-function parseDate(str) {
-  str = str
-    .replace(/^\s*/, '')
-    .replace(/\s*$/)
-    .replace(/'/, '')
-
-  return moment(str, "d mmm 'yy")
-}
-
-function parseBal(str) {
-  str = str
-    .replace(/^\s*\$/, '')
-    .replace(/\s*$)/, '')
-  
-  return Number(str)
-}
-
-var data = []
-
-rows.forEach( function(row) {
-  var dateStr = row.firstElementChild.textContent
-  var balStr = row.querySelector('.balance').textContent
-
-  data.push({
-    date: parseDate(dateStr),
-    bal: parseBal(balStr) 
-  })
-})
+  const sparkline = graph(timeSeries)
 
 
-console.log(JSON.stringify(data, null, 2))
-
-
-
+  const target = document.querySelector('table#TransactionTable').parentNode
+  target.prepend(sparkline)
+// })
 

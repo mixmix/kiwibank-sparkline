@@ -1,7 +1,7 @@
 {
   "name": "kiwibank-sparkline",
   "version": "1.0.0",
-  "description": "",
+  "description": "Watch for trends in your kiwibank accounts using a handy sparkline",
   "main": "index.js",
   "dependencies": {
   },
@@ -16,11 +16,13 @@
     "transforms": [ "es2040" ]
   },
   "scripts": {
-    "start": "budo graph.js --live",
-    "build": "browserify graph.js > bundle.js",
+    "start": "budo index.js --live",
+    "clean": "rm kiwibank-sparkline.zip",
+    "build": "NODE_ENV=production browserify index.js > bundle.js",
+    "zip": "zip kiwibank-sparkline *",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "mix irving <whimful@gmail.com>",
   "license": "ISC"
 }
