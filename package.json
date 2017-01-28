@@ -2,6 +2,11 @@
   "name": "kiwibank-sparkline",
   "version": "1.0.0",
   "description": "Watch for trends in your kiwibank accounts using a handy sparkline",
+  "homepage": "https://github.com/mixmix/kiwibank-sparkline",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mixmix/kiwibank-sparkline.git"
+  },
   "main": "index.js",
   "dependencies": {
   },
