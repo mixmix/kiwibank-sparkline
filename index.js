@@ -2,8 +2,6 @@ const scrapePage = require('./util/scrapePage')
 const transformData = require('./util/transformData')
 const graph = require('./util/graph')
 
-console.log('here')
-
 // document.addEventListener("DOMContentLoaded", () => {
   console.log("starting kiwibank-sparkline")
 

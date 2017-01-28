@@ -9,6 +9,7 @@
   },
   "main": "index.js",
   "dependencies": {
+    "watchify": "^3.9.0"
   },
   "devDependencies": {
     "browserify": "^14.0.0",
@@ -18,11 +19,14 @@
     "sparkline-canvas": "0.0.3"
   },
   "browserify": {
-    "transforms": [ "es2040" ]
+    "transforms": [
+      "es2040"
+    ]
   },
   "scripts": {
     "start": "budo index.js --live",
     "clean": "rm kiwibank-sparkline.zip",
+    "watch": "watchify index.js -o bundle.js -v",
     "build": "NODE_ENV=production browserify index.js > bundle.js",
     "pack": "mkdir -p pack && cp README.md pack && cp manifest.json pack/ && cp -r assets/icon* pack/assets && cp bundle.js pack && cd pack && zip -r kiwibank-sparkline *",
     "zip": "zip -r kiwibank-sparkline *",

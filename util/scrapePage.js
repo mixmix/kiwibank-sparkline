@@ -28,7 +28,7 @@ function parseDate(str) {
     .replace(/\s*$/)
     .replace(/'/, '')
 
-  return moment(str, "d mmm 'yy")
+  return moment(str, "D MMM YY")
 }
 
 function parseBal(str) {
