@@ -24,7 +24,8 @@
     "start": "budo index.js --live",
     "clean": "rm kiwibank-sparkline.zip",
     "build": "NODE_ENV=production browserify index.js > bundle.js",
-    "zip": "zip kiwibank-sparkline *",
+    "pack": "mkdir -p pack && cp README.md pack && cp manifest.json pack/ && cp -r assets/icon* pack/assets && cp bundle.js pack && cd pack && zip -r kiwibank-sparkline *",
+    "zip": "zip -r kiwibank-sparkline *",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

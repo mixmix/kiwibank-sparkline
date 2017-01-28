@@ -1,5 +1,7 @@
 # kiwibank-sparkline
 
+https://github.com/mixmix/kiwibank-sparkline
+
 This webextension activates on kiwibank account pages, and augments it with a sparkline visualisation of the bank records currently displayed on the page.
 
 The intention is to enable people to see longer term trends in their money.
