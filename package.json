@@ -1,0 +1,22 @@
+{
+  "name": "kiwibank-sparkline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^14.0.0",
+    "es2040": "^1.2.4",
+    "moment": "^2.17.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "budo": "^9.4.5",
+    "es2040": "^1.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
