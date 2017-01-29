@@ -1,6 +1,6 @@
 # kiwibank-sparkline
 
-https://github.com/mixmix/kiwibank-sparkline
+[INSTALL](https://github.com/mixmix/kiwibank-sparkline/releases/download/v1.1.0/kiwibank_sparkline-1.1-an.fx.xpi) (github release) | [INSTALL](https://addons.mozilla.org/en-US/firefox/addon/kiwibank-sparkline/) (firefox store - still in review) | [source](https://github.com/mixmix/kiwibank-sparkline)
 
 This webextension activates on kiwibank account pages, and augments it with a sparkline visualisation of the bank records currently displayed on the page.
 
