@@ -2,8 +2,6 @@
 
 [**INSTALL**](https://github.com/mixmix/kiwibank-sparkline/releases/download/v1.1.0/kiwibank_sparkline-1.1-an.fx.xpi) (github release)
 
----
-
 This webextension activates on kiwibank account pages, and augments it with a sparkline visualisation of the bank records currently displayed on the page.
 
 The intention is to enable people to see longer term trends in their money.
